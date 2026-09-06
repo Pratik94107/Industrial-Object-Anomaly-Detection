@@ -44,7 +44,7 @@ if img_file_buffer is not None:
     # Display the captured image
     col1, col2 = st.columns(2)
     with col1:
-        st.image(image, caption="Captured Image", use_column_width=True)
+        st.image(image, caption="Captured Image", use_container_width=True)
     
     with col2:
         with st.spinner("Analyzing bottle..."):
@@ -82,7 +82,7 @@ elif uploaded_file is not None:
     st.subheader("File Analysis")
     
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
     
     with st.spinner("Analyzing bottle..."):
         # Resize and preprocess image
